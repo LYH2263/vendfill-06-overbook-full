@@ -175,3 +175,30 @@ th { color: var(--vf-dim); font-weight: 600; font-size: 0.75rem; }
 
 .lane { display: flex; height: 28px; background: #0a0c10; border-radius: 4px; overflow: hidden; border: 1px solid #3a4656; margin: 0.35rem 0; }
 .lane-fill { height: 100%; }
+
+/* 可编辑货道卡：现态徽标、库存/在途输入、超占与满仓各自独立原因句 */
+.vf-slot { aspect-ratio: auto; gap: 0.15rem; }
+.vf-slot.vf-st-overbooked { border-color: var(--vf-red); box-shadow: inset 0 0 0 1px rgba(255,92,108,0.45); }
+.vf-slot.vf-st-full { border-color: rgba(57,255,136,0.55); }
+.vf-slot-fill.vf-over { background: var(--vf-red); }
+.vf-badge {
+  display: inline-block; margin-left: 0.25rem; padding: 0 0.3rem;
+  font-size: 0.58rem; font-weight: 700; border-radius: 2px;
+}
+.vf-badge-need_fill { background: rgba(255,193,74,0.18); color: var(--vf-amber); }
+.vf-badge-full { background: rgba(57,255,136,0.18); color: #14933f; }
+.vf-badge-overbooked { background: rgba(255,92,108,0.18); color: #c23343; }
+.vf-edit { display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; }
+.vf-edit label { font-size: 0.6rem; color: var(--vf-dim); display: flex; align-items: center; gap: 0.2rem; }
+.vf-edit input {
+  width: 42px; background: #0a0e14; color: var(--vf-text);
+  border: 1px solid #3a4656; border-radius: 2px; font-size: 0.68rem; padding: 0.15rem 0.25rem;
+}
+.vf-save { padding: 0.2rem 0.45rem; font-size: 0.65rem; }
+.vf-reason { margin: 0.3rem 0 0; font-size: 0.6rem; line-height: 1.35; }
+.vf-reason-over { color: var(--vf-red); }
+.vf-reason-full { color: var(--vf-led); }
+.vf-receipt .vf-reason-inline { display: block; margin-top: 0.1rem; font-size: 0.62rem; line-height: 1.3; }
+.vf-counts { text-align: center; font-weight: 700; font-size: 0.75rem; margin: 0.6rem 0 0; }
+.vf-err { color: var(--vf-red); font-size: 0.78rem; }
+.vf-receipt .vf-reason-over { color: #b4232f; }
